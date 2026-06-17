@@ -47,3 +47,5 @@ desktop.ini
 !.vscode/settings.json
 
 app/decompiled*/
+
+app/.tools/
