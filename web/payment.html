@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сервис доставки - Оплата</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <section class="app-page">
+        <header class="topbar">
+          <div class="topbar-left">
+            <span class="brand-logo small">D</span>
+            <strong class="brand-title">Центр оплаты</strong>
+          </div>
+          <div class="topbar-right">
+            <button id="backToCartBtn" class="btn btn-light">Вернуться в корзину</button>
+          </div>
+        </header>
+
+        <main class="payment-layout">
+          <section class="panel">
+            <h2 class="payment-title">Информация о заказе</h2>
+            <div id="paymentOrderList" class="payment-list"></div>
+          </section>
+
+          <aside class="panel">
+            <h2 class="payment-title">Детали оплаты</h2>
+
+            <div class="kv-row">
+              <span>Адрес доставки</span>
+              <strong id="paymentAddress"></strong>
+            </div>
+            <div class="address-picker-row">
+              <div class="address-picker-actions">
+                <select id="paymentAddressSelect" aria-label="Выбор адреса доставки"></select>
+                <button id="openAddressModalBtn" class="btn btn-light" type="button">Новый адрес</button>
+              </div>
+            </div>
+            <div class="kv-row">
+              <span>Время доставки</span>
+              <strong id="paymentEta"></strong>
+            </div>
+            <div class="kv-row">
+              <span>Стоимость товаров</span>
+              <strong id="paymentGoodsAmount"></strong>
+            </div>
+            <div class="kv-row">
+              <span>Стоимость доставки</span>
+              <strong id="paymentDeliveryFee"></strong>
+            </div>
+            <div class="kv-row">
+              <span>Скидка по купону</span>
+              <strong id="paymentCouponAmount"></strong>
+            </div>
+            <div class="kv-row total">
+              <span>К оплате</span>
+              <strong id="paymentTotalAmount"></strong>
+            </div>
+
+            <div class="pay-methods">
+              <label class="pay-method active" data-method="alipay">
+                <input type="radio" name="payMethod" value="alipay" checked />
+                <span>Alipay</span>
+              </label>
+              <label class="pay-method" data-method="wechat">
+                <input type="radio" name="payMethod" value="wechat" />
+                <span>WeChat Pay</span>
+              </label>
+              <label class="pay-method" data-method="card">
+                <input type="radio" name="payMethod" value="card" />
+                <span>Банковская карта</span>
+              </label>
+            </div>
+
+            <button id="payNowBtn" class="btn btn-primary pay-btn">Подтвердить оплату</button>
+          </aside>
+        </main>
+      </section>
+    </div>
+
+    <div id="addressModal" class="modal-overlay hidden">
+      <section class="modal-card">
+        <header class="modal-header">
+          <h3>Добавить адрес</h3>
+          <button id="closeAddressModalBtn" class="btn btn-light" type="button">Закрыть</button>
+        </header>
+        <form id="addressDetailForm" class="address-form">
+          <label>
+            Получатель
+            <input id="receiverInput" type="text" placeholder="Введите имя получателя" required />
+          </label>
+          <label>
+            Номер телефона
+            <input id="phoneInput" type="tel" placeholder="Введите номер телефона" required />
+          </label>
+          <div class="address-area-row">
+            <label>
+                Регион
+                <input id="provinceInput" type="text" placeholder="Регион" required />
+            </label>
+            <label>
+                Город
+                <input id="cityInput" type="text" placeholder="Город" required />
+            </label>
+            <label>
+                Район
+                <input id="districtInput" type="text" placeholder="Район" required />
+            </label>
+          </div>
+          <label>
+            Подробный адрес
+            <textarea id="detailInput" placeholder="Улица, дом, квартира и т.д." required></textarea>
+          </label>
+
+          <div class="label-group">
+            <span>Метка адреса</span>
+            <div class="label-buttons">
+              <button type="button" class="label-btn active" data-label="Дом">Дом</button>
+              <button type="button" class="label-btn" data-label="Работа">Работа</button>
+              <button type="button" class="label-btn" data-label="Учеба">Учеба</button>
+            </div>
+          </div>
+
+          <label class="switch-row">
+            <span>Сделать адресом по умолчанию</span>
+            <input id="defaultAddressInput" type="checkbox" />
+          </label>
+
+          <button type="submit" class="btn btn-primary">Сохранить адрес</button>
+        </form>
+      </section>
+    </div>
+
+    <script src="./api.js"></script>
+    <script src="./payment.js"></script>
+  </body>
+</html>

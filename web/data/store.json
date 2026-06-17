@@ -1,0 +1,244 @@
+{
+  "users": [
+    {
+      "phone": "13800138000",
+      "password": "123456",
+      "name": "????"
+    },
+    {
+      "phone": "15571122746",
+      "password": "xfs2012312",
+      "name": "llq1"
+    },
+    {
+      "phone": "70000000001",
+      "password": "123456",
+      "name": "????"
+    }
+  ],
+  "foods": [
+    {
+      "id": "f1",
+      "name": "Рис с тушеной говядиной",
+      "category": "Основные блюда",
+      "emoji": "🍛",
+      "rating": 4.8,
+      "time": "25 мин",
+      "price": 26
+    },
+    {
+      "id": "f2",
+      "name": "Комбо с куриным бургером",
+      "category": "Фастфуд",
+      "emoji": "🍔",
+      "rating": 4.6,
+      "time": "20 мин",
+      "price": 22
+    },
+    {
+      "id": "f3",
+      "name": "Лапша с мраморной говядиной",
+      "category": "Лапша",
+      "emoji": "🍜",
+      "rating": 4.7,
+      "time": "24 мин",
+      "price": 19
+    },
+    {
+      "id": "f4",
+      "name": "Фруктовый салат",
+      "category": "Легкие блюда",
+      "emoji": "🥗",
+      "rating": 4.5,
+      "time": "18 мин",
+      "price": 16
+    },
+    {
+      "id": "f5",
+      "name": "Пицца с сыром",
+      "category": "Европейская кухня",
+      "emoji": "🍕",
+      "rating": 4.4,
+      "time": "32 мин",
+      "price": 39
+    },
+    {
+      "id": "f6",
+      "name": "Жареный рис с креветками",
+      "category": "Основные блюда",
+      "emoji": "🍤",
+      "rating": 4.7,
+      "time": "26 мин",
+      "price": 23
+    }
+  ],
+  "addresses": [
+    {
+      "id": "addr-9c7558f6",
+      "userPhone": "15571122746",
+      "receiver": "llq",
+      "phone": "15571122746",
+      "province": "1",
+      "city": "12",
+      "district": "333",
+      "detail": "11",
+      "fullAddress": "11233311",
+      "label": "Дом",
+      "isDefault": true
+    },
+    {
+      "id": "addr-198fcd56",
+      "userPhone": "13800008888",
+      "receiver": "Test",
+      "phone": "13800008888",
+      "province": "A",
+      "city": "B",
+      "district": "C",
+      "detail": "D",
+      "fullAddress": "A B C D",
+      "label": "Home",
+      "isDefault": true
+    }
+  ],
+  "coupons": [
+    {
+      "id": "cpn-4224876c",
+      "userPhone": "13800138000",
+      "title": "Скидка для новичков",
+      "minAmount": 20,
+      "discount": 5,
+      "status": "unused"
+    },
+    {
+      "id": "cpn-38f7f0ec",
+      "userPhone": "13800138000",
+      "title": "Скидка 10 при заказе от 50",
+      "minAmount": 50,
+      "discount": 10,
+      "status": "unused"
+    },
+    {
+      "id": "cpn-d155861c",
+      "userPhone": "15571122746",
+      "title": "Скидка для новичков",
+      "minAmount": 20,
+      "discount": 5,
+      "status": "unused"
+    },
+    {
+      "id": "cpn-de9e563e",
+      "userPhone": "15571122746",
+      "title": "Скидка 10 при заказе от 50",
+      "minAmount": 50,
+      "discount": 10,
+      "status": "unused"
+    },
+    {
+      "id": "cpn-f697cec0",
+      "userPhone": "70000000001",
+      "title": "新人立减券",
+      "minAmount": 20,
+      "discount": 5,
+      "status": "unused"
+    },
+    {
+      "id": "cpn-0eee3456",
+      "userPhone": "70000000001",
+      "title": "满50减10",
+      "minAmount": 50,
+      "discount": 10,
+      "status": "unused"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord-ee7a2833e7",
+      "orderNo": "1773995289298b380",
+      "userPhone": "15571122746",
+      "items": [
+        {
+          "id": "f1",
+          "name": "Рис с тушеной говядиной",
+          "qty": 1,
+          "price": 26,
+          "subtotal": 26
+        },
+        {
+          "id": "f3",
+          "name": "Лапша с мраморной говядиной",
+          "qty": 1,
+          "price": 19,
+          "subtotal": 19
+        },
+        {
+          "id": "f5",
+          "name": "Пицца с сыром",
+          "qty": 1,
+          "price": 39,
+          "subtotal": 39
+        }
+      ],
+      "goodsAmount": 84,
+      "deliveryFee": 4,
+      "couponId": null,
+      "couponDiscount": 0,
+      "payable": 88,
+      "payMethod": "alipay",
+      "addressId": "addr-9c7558f6",
+      "address": "11233311",
+      "receiver": "llq",
+      "receiverPhone": "15571122746",
+      "addressLabel": "Дом",
+      "status": "已支付",
+      "createdAt": 1773995289298
+    },
+    {
+      "id": "ord-422eeafc2a",
+      "orderNo": "177892919762558a0",
+      "userPhone": "15571122746",
+      "items": [
+        {
+          "id": "f1",
+          "name": "Рис с тушеной говядиной",
+          "qty": 1,
+          "price": 26,
+          "subtotal": 26
+        },
+        {
+          "id": "f2",
+          "name": "Комбо с куриным бургером",
+          "qty": 1,
+          "price": 22,
+          "subtotal": 22
+        },
+        {
+          "id": "f4",
+          "name": "Фруктовый салат",
+          "qty": 1,
+          "price": 16,
+          "subtotal": 16
+        },
+        {
+          "id": "f3",
+          "name": "Лапша с мраморной говядиной",
+          "qty": 1,
+          "price": 19,
+          "subtotal": 19
+        }
+      ],
+      "goodsAmount": 83,
+      "deliveryFee": 4,
+      "couponId": null,
+      "couponDiscount": 0,
+      "payable": 87,
+      "payMethod": "alipay",
+      "addressId": "addr-9c7558f6",
+      "address": "11233311",
+      "receiver": "llq",
+      "receiverPhone": "15571122746",
+      "addressLabel": "Дом",
+      "status": "Оплачен",
+      "createdAt": 1778929197625
+    }
+  ]
+}

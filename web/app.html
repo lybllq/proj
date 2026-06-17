@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сервис доставки - Главная</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <section class="app-page">
+        <header class="topbar">
+          <div class="topbar-left">
+            <span class="brand-logo small">D</span>
+            <strong class="brand-title">DeliFood Delivery</strong>
+          </div>
+          <div class="topbar-right">
+            <div class="location-chip">📍 Москва, Тверской район</div>
+            <button id="logoutBtn" class="btn btn-light">Выйти</button>
+          </div>
+        </header>
+
+        <div class="desktop-layout">
+          <nav class="tabbar side-nav">
+            <button class="tab-item active" data-view="homeView">Главная</button>
+            <button class="tab-item" data-view="cartView">
+              Корзина
+              <span id="cartBadge" class="badge">0</span>
+            </button>
+            <button class="tab-item" data-view="profileView">Профиль</button>
+          </nav>
+
+          <main class="content-area">
+            <section id="homeView" class="view active">
+              <div class="hero">
+                <h2>Что закажем сегодня?</h2>
+                <p>Проверенные рестораны с доставкой до 30 минут</p>
+                <input id="searchInput" type="text" placeholder="Поиск ресторана или блюда..." />
+              </div>
+
+              <div class="tags" id="categoryTags"></div>
+              <h3 class="section-title">Рекомендуемые рестораны</h3>
+              <div id="restaurantList" class="card-list"></div>
+            </section>
+
+            <section id="cartView" class="view">
+              <h2>Корзина</h2>
+              <div id="cartItems" class="cart-items"></div>
+              <div class="checkout-bar">
+                <div>
+                  <p>Итого</p>
+                  <strong id="cartTotal">₽0</strong>
+                </div>
+                <button id="checkoutBtn" class="btn btn-primary">Оформить заказ</button>
+              </div>
+            </section>
+
+            <section id="profileView" class="view">
+              <div class="profile-card">
+                <div class="avatar">A</div>
+                <div>
+                  <h2 id="userName">Гостевой пользователь</h2>
+                  <p>Базовый уровень</p>
+                </div>
+              </div>
+
+              <div class="menu-list">
+                <button class="menu-item active" data-profile-tab="orders">Мои заказы</button>
+                <button class="menu-item" data-profile-tab="address">Адреса доставки</button>
+                <button class="menu-item" data-profile-tab="coupon">Купоны</button>
+                <button class="menu-item" data-profile-tab="service">Поддержка</button>
+              </div>
+
+              <section id="profilePanel" class="panel profile-panel"></section>
+            </section>
+          </main>
+        </div>
+      </section>
+    </div>
+
+    <script src="./api.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

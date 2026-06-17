@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tv_login_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#111827" />
+
+    <TextView
+        android:id="@+id/tv_login_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Sign in to continue ordering food"
+        android:textSize="14sp"
+        android:textColor="#6B7280" />
+
+    <EditText
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:minHeight="48dp" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:minHeight="48dp"
+        android:text="Login" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:minHeight="48dp"
+        android:text="Register" />
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сервис доставки - стиль Delivery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <section class="login-page">
+        <div class="login-card">
+          <div class="brand-row">
+            <span class="brand-logo">D</span>
+            <div>
+              <h1>DeliFood Доставка</h1>
+              <p>Заказывайте легко, получайте быстро</p>
+            </div>
+          </div>
+
+          <form id="loginForm" class="form-grid">
+            <label>
+              Номер телефона
+              <input id="phone" type="tel" placeholder="Введите номер телефона" required />
+            </label>
+            <label>
+              Пароль
+              <input id="password" type="password" placeholder="Введите пароль" required />
+            </label>
+            <button type="submit" class="btn btn-primary">Войти</button>
+          </form>
+          <p class="hint auth-switch">
+            Нет аккаунта? <a href="./register.html">Зарегистрироваться</a>
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <script src="./api.js"></script>
+    <script src="./login.js"></script>
+  </body>
+</html>

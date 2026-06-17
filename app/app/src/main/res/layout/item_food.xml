@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/item_background"
+    android:padding="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <TextView
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:id="@+id/tv_food_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food Name"/>
+        <TextView
+            android:textSize="12sp"
+            android:textColor="#999999"
+            android:ellipsize="end"
+            android:id="@+id/tv_food_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Food Description"
+            android:maxLines="2"/>
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+            <TextView
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:id="@+id/tv_food_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$28.00"/>
+            <TextView
+                android:textSize="11sp"
+                android:textColor="#999999"
+                android:id="@+id/tv_monthly_sales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1000 sold"
+                android:layout_marginStart="12dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        android:id="@+id/btn_add_to_cart"
+        android:background="@drawable/button_primary"
+        android:layout_width="80dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="12dp"
+        android:text="Add"/>
+</LinearLayout>
